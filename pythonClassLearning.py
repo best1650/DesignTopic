@@ -8,20 +8,20 @@ class Addition:
 		print("Addition Constructor")
 		self.value1 = v1
 		self.value2 = v2
-	
+
 	def getSum(self):
 		return self.value1 + self.value2
-		
+
 	def __del__(self):
 		print("Addition Destructor")
 
 class Person(object):
 	def __init__(self, name):
 		self.name = name
-	
+
 	def getName(self):
 		return self.name
-	
+
 	def isEmployee(self):
 		return False
 
@@ -32,15 +32,14 @@ class Employee(Person):
 if __name__ == '__main__':
 	addObj = Addition(10, 20)
 	print("Answer:%d" % (addObj.getSum()))
-	
+
 	p = Person('p1')
 	print(p.isEmployee())
-	
+
 	e = Employee('e1')
 	print(e.isEmployee())
 
 '''
-
 
 # Check if a class is subclass of another
 class Base(object):
@@ -50,6 +49,77 @@ class Derived(Base):
 	pass
 
 print(issubclass(Derived, Base))
-print(issubclass(Base, Derived))	
-	
-	
+print(issubclass(Base, Derived))
+
+
+# Single Inheritance
+class Parent:
+    p_v = 10
+    
+    def func1(self):
+        print(self.p_v)
+        print("parent class")
+
+class Child(Parent):
+    def func2(self):
+        self.p_v = 20
+        print(self.p_v)
+        print("child class")
+
+obj = Child()
+obj.func1()
+obj.func2()
+obj.func1()
+
+
+# Multiple Inheritance
+class Mother:
+    motherName = ''
+
+class Father:
+    fatherName = ''
+
+class Son(Mother, Father):
+    def __init__(self, mn, fn):
+        self.fatherName = fn
+        self.motherName = mn
+    
+    def parents(self):
+        print(self.motherName)
+        print(self.fatherName)
+
+son = Son('mon', 'dad')
+son.parents()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
