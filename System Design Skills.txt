@@ -1,0 +1,10 @@
+### ************************************************************************************* ###
+1. make sure that you read the question carefully.
+
+2. If the question requires the operation must run in constant time. For this reason, we can
+immediately rule out the use of a Binary Search Tree or Heap. While these data structures are 
+often great for keeping track of a minimum, their core operations (find, add, and remove) 
+are O(logn).
+
+3. Always ask for invalid cases handling.
+
